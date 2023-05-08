@@ -1,0 +1,39 @@
+<!-- tim kiem -->
+<div class="employee-container-content-wrapped search-container">
+    <div class="search-wrapped">
+        <!-- tim kiem bang hinh -->
+        <div class="employee-search-by-img">
+            <h1 class="employee-search-title">Checkin</h1>
+            <img id="pqImg" src="/media/unkown.jpg" alt="Placeholder" width="256" height="256"></img>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{search_form.avatar}}
+                <button type="submit" class="submit-form-btn" id = "checkin_btn">Checkin</button>
+            </form>
+        </div>
+    </div>
+    <!-- search result -->
+    <!-- <div class="employee-search-result">
+        <span>Kết quả</span>
+        <div class="employee-info">
+            <div class="employee-info-img"></div>
+            <div class="employee-about">
+                <p class="employee-name">Nguyen Duy Hieu</p>
+                <div class="employee-desc">
+                    <span class="employee-age">Age: 22</span>
+                    <span class="employee-position">Position: Truong phong</span>
+                </div>
+            </div>
+        </div>
+        <span class="search-none">Không có kết quả cần tìm</span> -->
+        
+</div>
+
+<script>
+    imgQuery.onchange = evt => {
+        const [file] = imgQuery.files
+        if (file) {
+            pqImg.src = URL.createObjectURL(file)
+        }
+      }
+</script>

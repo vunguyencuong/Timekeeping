@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{%block title%}Salary{%endblock title%}
+
+{%block stylesheets%}
+{%load static%}
+<link rel="stylesheet" href={%static 'css/style.css'%}>
+<link rel="stylesheet" href={%static 'css/nhansu.css'%}>
+<link rel="stylesheet" href={%static 'css/index.css'%}>
+<link rel="stylesheet" href={%static 'css/tinhluong.css'%}>
+{%endblock stylesheets%}
+
+{%block content%}
+<!-- container begin -->
+<div class="col-container col-94">
+    <div class="container">
+        <!-- menu item container begin -->
+        <div class="container-item time-keeping-container">
+            <h1>Tính tiền lương</h1>
+            <div class="time-keeping-wrapped col-full">
+                <div class="col-half">
+                    {%for employee in employees%}
+                        {%if forloop.counter|divisibleby:2%}
+                        {%else%}
+                            {%include 'salary/card_employee.html'%}
+                        {% endif %}
+                    {%endfor%}
+                    
+                </div>
+                <div class="col-half">
+                    {%for employee in employees%}
+                        {%if forloop.counter|divisibleby:2%}
+                            {%include 'salary/card_employee.html'%}
+                        {% endif %}
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+        {%include 'salary/modal.html'%}
+        <!-- menu container end -->
+    </div>
+</div>
+<!-- container end -->
+{%endblock%}
+
+
+{%block javascripts%}
+    {%load static%}
+    <script src={%static 'js/main.js'%}></script>
+    <script src={%static 'js/tinhluong.js'%}></script>
+{%endblock javascripts%}

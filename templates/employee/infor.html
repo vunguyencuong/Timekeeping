@@ -1,0 +1,19 @@
+ <!-- thong tin nhan vien -->
+ <div class="employee-container-content-wrapped active">
+    <div class="col-half">
+        {%for employee in employees%}
+            {%if forloop.counter|divisibleby:2%}
+            {%else%}
+                {%include 'employee/card_employee.html'%}
+            {% endif %}
+        {%endfor%}
+    </div>
+    <div class="col-half">
+        {%for employee in employees%}
+            {%if forloop.counter|divisibleby:2%}
+                {%include 'employee/card_employee.html'%}
+            {%endif%}
+        {%endfor%}
+
+    </div>
+</div>

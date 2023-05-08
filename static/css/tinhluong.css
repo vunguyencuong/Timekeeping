@@ -1,0 +1,14 @@
+.time-keeping-wrapped {
+    display: flex;
+    margin-top: 16px;
+}
+
+.show-info {
+    margin-left: 20%;
+    font-size: 2.8rem;
+}
+
+
+.modal-salary-wrapped span:nth-child(2) {
+    color: red;
+}

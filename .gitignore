@@ -1,0 +1,4 @@
+__pycache__
+employee/__pycache__
+employee/migrations
+facenet_keras.h5

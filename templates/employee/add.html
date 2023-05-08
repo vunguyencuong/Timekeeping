@@ -1,0 +1,54 @@
+ <!-- them nhan vien -->
+ <div class="employee-container-content-wrapped">
+    <form action="" class="employee-document" method="POST" enctype="multipart/form-data" id="image_form">
+        {% csrf_token %}
+        <h1 class="employee-document-title">Thông tin bản thân</h1>
+        <div class="employee-new-container-wrapped">
+            <div class="employee-new-info">
+                <div class="employee-new-name-gender">
+                    <div class="employee-new-name">
+                        <span>Họ và tên: </span>
+                        {{add_form.name}}
+                    </div>
+                    <div class="employee-new-gender">
+                        {{add_form.gender}}
+                    </div>
+                </div>
+                <div class="employee-new-birthday-hometown">
+                    <div class="employee-new-birthday">
+                        <span class="employee-new-birthday-title">Birthday: </span>
+                        {{add_form.birthDay}}
+                    </div>
+                    <div class="employee-new-hometown">
+                        <span>Nơi sinh: </span>
+                        {{add_form.homeTown}}
+                    </div>
+                </div>
+                <div class="employee-new-phone-number">
+                    <span>Số điện thoại: </span>
+                    {{add_form.phone}}
+                </div>
+                <div class="employee-new-education">
+                    <span>Trình độ: </span>
+                    {{add_form.educationLevel}}
+                </div>
+
+            </div>
+            <div class="employee-new-img-wrapped">
+                <div class="employee-new-img-upload"></div>
+                {{add_form.avatar}}
+            </div>
+            <img id="previewImg" src="/media/unkown.jpg" alt="Placeholder" width="256" height="256"></img>  
+        </div>
+        <button type="submit" class="submit-form-btn">Thêm nhân viên</button>
+    </form>
+</div>
+
+<script>
+    imgInp.onchange = evt => {
+        const [file] = imgInp.files
+        if (file) {
+            previewImg.src = URL.createObjectURL(file)
+        }
+      }
+</script>

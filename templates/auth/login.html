@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'fonts/themify-icons/themify-icons.css'%}">
+    <link rel="stylesheet" href="{%static 'css/login.css'%}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="main">
+        <div class="login-wrapped">
+            <div class="login-container">
+                <h1 class="login-header">Login</h1>
+                <div class="login-form">
+                    <form action="" class="form-login">
+                        <div class="account-login">
+                            <p class="login-title">Nhập tài khoản</p>
+                            <input type="text" class="account-input" placeholder="Email">
+                            <span class="login-error">Vui lòng nhập tài khoản đúng!</span>
+                        </div>
+                        <div class="account-login">
+                            <p class="login-title">Nhập mật khẩu</p>
+                            <input type="password" name="" id="" class="account-input" placeholder="Password">
+                            <span class="login-error">Vui lòng nhập mật khẩu đúng!</span>
+                            <p class="password-forget">
+                                <a href="#" class="password-forget--link">Quên mật khẩu?</a>
+                            </p>
+                        </div>
+                        <div class="account-login">
+                            <button type="submit"  id="login-btn">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

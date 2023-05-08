@@ -1,0 +1,11 @@
+<div class="employee-info">
+    <div class="employee-info-img" style = "background: url(/media/{{employee.avatar}})  top center / cover no-repeat;"></div>
+    <div class="employee-about">
+        <p class="employee-name">{{employee.name}}</p>
+        <div class="employee-desc">
+            <span class="employee-age">Birthday: {{employee.birthDay}}</span>
+            <span class="employee-position">Education: {{employee.educationLevel}}</span>   
+        </div>
+    </div>
+    <span class="employee-status {{employee.status}}"></span>
+</div>

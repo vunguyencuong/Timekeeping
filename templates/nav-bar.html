@@ -1,0 +1,44 @@
+<!-- menu start -->
+<div class="col-menu col-6">
+    <div class="navigation">
+        <div class="menuToggle">
+            <i class="ti-menu menuToggle-icon"></i>
+        </div>
+        <ul class="menuList">
+            <li class="menuList-item {%ifequal name "home"%}active{%endifequal%}">
+                <a href="{%url 'employee:home'%}">
+                    <div class="menulist-item-icon">
+                        <i class="ti-home"></i>
+                    </div>
+                    <span class="menuList-item-text">Trang chủ</span>
+                </a>
+            </li>
+            <li class="menuList-item {%ifequal name "employee"%}active{%endifequal%}">
+                <a href="{% url 'employee:employee' %}">
+                    <div class="menulist-item-icon">
+                        <i class="ti-user"></i>
+                    </div>
+                    <span class="menuList-item-text">Nhân viên</span>
+                </a>
+            </li>
+            <li class="menuList-item {%ifequal name "salary"%}active{%endifequal%}">
+                <a href="{% url 'employee:salary'%}">
+                    <div class="menulist-item-icon">
+                        <i class="ti-bar-chart"></i>
+                    </div>
+                    <span class="menuList-item-text">Tính lương</span>
+                </a>
+            </li>
+        </ul>
+        <!-- account login start -->
+        <!-- <div class="account-login">
+            <div class="user-admin">
+                <div class="user-admin-img"></div>
+                <span class="user-admin-name">Nguyễn Duy Hiếu</span>
+            </div>
+            <button class="logout-btn">Logout</button>
+        </div> -->
+        <!-- account login end -->
+    </div>
+</div>
+<!-- menu end -->

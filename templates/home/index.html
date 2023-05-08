@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+
+{%block title%}Home{%endblock title%}
+  
+{%block stylesheets%}
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" href="{%static 'css/index.css'%}">
+    <link rel="stylesheet" href="{%static 'css/nhansu.css'%}">
+{%endblock stylesheets%}
+
+
+{%block content%}
+ <!-- container begin -->
+ <div class="col-container col-94">
+    <div class="container">
+        <!-- menu item container begin -->
+        <div class="container-item home-container">
+           <!-- nhan su online start -->
+           <div class="employee-onl-wrapped">
+               <h1 class="employee-onl-titlle">Nhân viên đi làm</h1>
+                <div class="col-full">
+                    <div class="col-half">
+                        {%for employee in employees%}
+                            {%if forloop.counter|divisibleby:2%}
+                            {%else%}
+                                {%include 'home/card_employee.html'%}
+                            {% endif %}
+                        {%endfor%}
+                    </div>
+                    <div class="col-half">
+                        {%for employee in employees%}
+                            {%if forloop.counter|divisibleby:2%}
+                                {%include 'home/card_employee.html'%}
+                            {% endif %}
+                        {%endfor%}
+                    </div>
+                </div>
+           </div>
+           <!-- nhan su online end -->
+        </div>
+        <!-- menu container end -->
+    </div>
+</div>
+<!-- container end -->
+{%endblock content%}
+
+{%block javascripts%}
+{%load static%}
+    <script src="{%static 'js/main.js'%}"></script>
+    <script src="{%static 'js/index.js'%}"></script>
+{%endblock%}

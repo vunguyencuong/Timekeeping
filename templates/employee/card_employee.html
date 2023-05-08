@@ -1,0 +1,21 @@
+<div class="employee-container-content" id = "employee_infor_{{employee.id}}">
+    <div class="employee-info">
+        <div class="employee-info-img" style = "background: url(/media/{{employee.avatar}})  top center / cover no-repeat;"></div>
+        <div class="employee-about">
+            <p class="employee-name">{{employee.name}}</p>
+            <div class="employee-desc">
+                <span class="employee-age">Birthday: {{employee.birthDay}}</span>
+                <span class="employee-position">Education: {{employee.educationLevel}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="employee-action">
+        <span class="employee-show-info" id="{{employee.id}}">
+            <i class="ti-menu-alt"></i>
+        </span>
+        <span class="employee-delete" id="{{employee.id}}">
+            <i class="ti-close"></i>
+        </span>
+    </div>
+</div>
+<div hidden id = "einfor_strformat_{{employee.id}}">{{employee.name}}@{{employee.gender}}@{{employee.birthDay}}@{{employee.homeTown}}@{{employee.phone}}@{{employee.educationLevel}}@{{employee.avatar}}</div>
